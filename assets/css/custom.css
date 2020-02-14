@@ -1,9 +1,15 @@
 body, h1, h2, h3, h4, h5, h6, p {
 	font-family: 'Lato', sans-serif!important;
 }
+html {
+	overflow-x: hidden;
+}
 
 #fh5co-logo {
 	margin: 30px 0;
+}
+#fh5co-logo a, .sf-menu a, .fh5co-cover .desc h2, .fh5co-cover .desc span, .sf-menu li.active a {
+	color: #000000;
 }
 
 #fh5co-logo img {
@@ -34,10 +40,10 @@ body, h1, h2, h3, h4, h5, h6, p {
 
 .fh5co-blog .blog-text {
 	text-align: center;
-	/* border: 1px solid rgba(255,0,185,1); */
 	box-shadow: none;
 	transition: 0.3s all ease-out;
 	cursor: pointer;
+	padding: 25px 15px;
 	/* box-shadow: 0px 6px 62px -6px rgba(0, 0, 0, 0.3); */
 }
 
@@ -52,29 +58,24 @@ body, h1, h2, h3, h4, h5, h6, p {
 	justify-content: space-between;
 }
 
-.fh5co-blog .blog-text h3 {
-	/* color: rgba(255,0,185,1)!important; */
-
-}
 
 .fh5co-blog .blog-text .price-wrap span {
 	line-height: 22px;
 }
 
 .fh5co-blog .blog-text .price {
-	color: rgba(255,0,185,1);
+	color: #03A9F4;
 	font-weight: bold;
 	font-size: 20px;
 }
 
 .fh5co-hero, .fh5co-hero-bg {
 	height: 550px;
-	background: rgb(255,214,0);
-	background: radial-gradient(circle, rgba(255,214,0,1) 0%, rgba(255,0,185,1) 100%, rgba(255,0,185,1) 100%);
+	background: #03A9F4;
+	background:radial-gradient(circle, rgb(255, 255, 255) 0%, #03A9F4 100%, #03A9F4 100%);
 }
-
-#offcanvas-menu {
-	background: rgba(255,0,185,1);
+#offcanvas-menu, .heading-section:after {
+	background: #03A9F4;
 }
 
 #offcanvas-menu ul li > a {
@@ -90,15 +91,13 @@ body, h1, h2, h3, h4, h5, h6, p {
 }
 
 #fh5co-blog-section .nav-tabs li.active a {
-	/* background-color: unset!important;
-	background-position: 100% 0!important; */
-	transform: scale(1.15);
+	transform: scale(1.25);
 }
 
  .btn-primary {
 	background-color: unset!important;
 	color: #fff!important;
-	background-image: linear-gradient(90deg, rgba(255,214,0,1), rgba(255,0,185,1),rgba(255,214,0,1))!important;
+	background-image: linear-gradient(90deg, #00BCD4, #0089f5,#00BCD4)!important;
 	transition: .3s all;
 	border-radius: 30px!important;
 	background-size: 200% 100%!important;
@@ -122,7 +121,7 @@ body, h1, h2, h3, h4, h5, h6, p {
 	}
 
 	.fh5co-blog .blog-text:hover {
-		box-shadow: 0px 6px 52px 0px rgba(255,0,185,0.15);
+		box-shadow: 0px 6px 52px 0px rgba(0,188,212,0.2);
 	}
 
 	.fh5co-blog .blog-text:hover .btn-primary{
@@ -167,10 +166,17 @@ body, h1, h2, h3, h4, h5, h6, p {
 
 .sidebar ul {
 	margin-bottom: 10px;
-	padding-left: 20px;
+	padding-left: 0px;
+	display: flex;
+	flex-wrap: wrap;
+}
+.sidebar ul li {
+	padding: 0 8px;
 }
 .sidebar >li {
-	/* font-size: 20px; */
+	font-size: 20px;
+	padding-bottom: 3px;
+  margin-bottom: 5px;
 	border-bottom: 1px dotted #c7c7c7;
 	font-weight: bold;
 
@@ -195,19 +201,28 @@ body, h1, h2, h3, h4, h5, h6, p {
 	border-radius: 20px;
 	color: #fff;
 	font-weight: bold;
-	background:  rgba(255,214,0,1);
+	background:  #00BCD4;
 }
 
 #footer {
-	background:  rgba(255,214,0,1);
+	background:  #03a9f4;
+	padding: 40px 20px 0;
+	color: #fff;
 }
 
-#footer h3, #footer ul li a {
-	color: #848484;
+#footer h3, #footer ul li a, #footer p {
+	color: #fff;
 }
 
 #footer .fh5co-copyright {
-    border-top: 1px solid #848484;
+	padding: 20px;
+  border-top: 1px solid #fff;
+}
+#footer p {
+	margin-bottom: 0;
+}
+#footer [class*="col"] {
+	padding-bottom: 0;
 }
 
 @media(min-width: 992px) {
@@ -225,5 +240,12 @@ body, h1, h2, h3, h4, h5, h6, p {
 
 	.sidebar ul li {
 		padding: 0 10px;
+	}
+}
+
+@media(max-width: 450px) {
+	#fh5co-logo {
+		margin: 16px 0px ;
+		text-align: left;
 	}
 }

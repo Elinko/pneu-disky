@@ -69,9 +69,6 @@
 									<a href="<?= get_home_url();  ?>/produkty?cat=1572">Disky</a>
 								</li>
 								<li>
-									<a href="<?= get_home_url();  ?>/produkty?cat=vsetky">Všetky</a>
-								</li>
-								<li>
 									<a href="<?= get_home_url();  ?>/blogy">Blog</a>
 								</li>
 

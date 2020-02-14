@@ -19,13 +19,12 @@
 					<div class="row">
 						<div class="col-md-3 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
 							<h3>O nás</h3>
-							<p>Přinášíme Vám ty nejkvalitnější parfémy za nejlepší ceny v eshopech</p>
+							<p>Prinášame Vám výber najpredávanejších a najlacnejších pneumatík a diskov na internete.</p>
 						</div>
 						<div class="col-md-6 col-md-push-1 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
-							<h3>Top 3 parfémy</h3>
- 							<div class="heureka-affiliate-category" data-trixam-positionid="82640" data-trixam-categoryid="1652" data-trixam-categoryfilters="" data-trixam-codetype="iframe" data-trixam-linktarget="blank"></div>
-
-
+							<h3>Top 3 pneumatiky</h3>
+ 							 <div class="heureka-affiliate-category" data-trixam-positionid="24846" data-trixam-categoryid="972" data-trixam-categoryfilters="" data-trixam-codetype="iframe" data-trixam-linktarget="blank"></div>
+							 <div class="heureka-affiliate-category" data-trixam-positionid="24848" data-trixam-categoryid="1471" data-trixam-categoryfilters="" data-trixam-codetype="iframe" data-trixam-linktarget="blank"></div>
 						</div>
 
 

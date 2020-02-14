@@ -27,16 +27,24 @@
 		$catParent = get_category($catName->parent);
 	  $catParent2 = get_category($catParent->parent);
 
-		if($catParent2->errors['invalid_term'][0]!='Prázdny termín.') {
+		// echo "<pre>";
+		// print_r($catParent);
+		// echo "</pre>";
+		if($catParent->errors['invalid_term'][0]=='Prázdny termín.') {
+			$catParentID = $catName->term_id;
+			$catParent = $catName->name;
+		} else if($catParent2->errors['invalid_term'][0]!='Prázdny termín.') {
 			$catParentID = $catParent2->term_id;
 			$catParent = $catParent2->name;
 		} else {
 			$catParentID = $catParent->term_id;
 			$catParent = $catParent->name;
 		}
-		echo "<pre>";
-		print_r($catParent2->errors['invalid_term'][0]);
-		echo "</pre>";
+
+		if($catName->name == $catParent) {
+			$catParent= '';
+		}
+
 
 
 		if(!empty(htmlspecialchars($_GET["pa"]))) {
@@ -74,7 +82,7 @@
 			<div class="container">
 				<div class="heading-section">
 
-					<h3 class="text-center"><?php if($catParent) {echo 'Lacné ' .($catParent) .' značky '. ucfirst($catName->name ); } else { echo 'Lacné '. ($catName->name)  ;}   ?></h3>
+					<h3 class="text-center"><?php if($catParent) {echo 'Lacné ' .($catParent) . ' '. ucfirst($catName->name ); } else { echo 'Lacné '. ($catName->name)  ;}   ?></h3>
 				</div>
 				<div class="row">
 					<div class="col-md-3 col-lg-3 sidebar">
@@ -107,7 +115,7 @@
 													echo '</ul>';
 											echo '</ul>';
 										} else {
-											if($value->parent!=1537) {
+											if(($value->parent!=1537) && ($value->parent!=1572)) {
 												echo '</ul>';
 												echo '<li>';
 												echo '<a href="'. get_home_url() . '/produkty?cat='. $tmp->term_id . '">' .ucfirst($tmp->name). '</a>';
@@ -129,7 +137,8 @@
 								}
 							?>
 							<br>
-							<div class="heureka-affiliate-category" data-trixam-positionid="82641" data-trixam-categoryid="1652" data-trixam-categoryfilters="" data-trixam-codetype="iframe" data-trixam-linktarget="blank"></div>
+							<div class="heureka-affiliate-category" data-trixam-positionid="24847" data-trixam-categoryid="972" data-trixam-categoryfilters="" data-trixam-codetype="iframe" data-trixam-linktarget="blank"></div>
+							<div class="heureka-affiliate-category" data-trixam-positionid="24850" data-trixam-categoryid="1471" data-trixam-categoryfilters="" data-trixam-codetype="iframe" data-trixam-linktarget="blank"></div>
 					</div>
 
 					<div class="col-md-9  col-lg-9 tab-content">
@@ -146,11 +155,11 @@
 											<div class="prod-title">
 												<div class="price-wrap">
 													<span class="amount"><?= the_field('recenzie');  ?> </span>
-													<span class="price">od <?= the_field('cena');  ?> Kč </span>
+													<span class="price">od <?= the_field('cena');  ?> € </span>
 												</div>
 												<img class="img-responsive" src="<?php echo get_the_post_thumbnail_url( get_the_ID(), 'full' );  ?>" alt="">
 												<h3><?= the_title();  ?></h3>
-												<a href="https://<?= the_field('url');  ?>" class="btn btn-primary">Koupit</a>
+												<a href="https://<?= the_field('url');  ?>" class="btn btn-primary">Viac detailov</a>
 											</div>
 										</div>
 									</div>
@@ -172,8 +181,8 @@
 								if($pa) {
 									echo '<a href="' .get_home_url() .'/produkty?cat='. $catActual .'&pa='.($pa-1) . '" class="">'.($pa-1).'</a>';
 								}
-								echo '<a href="' .get_home_url() .'/produkty?cat='. $catActual .'&pa='.($pa) . '" class="actual">'.($pa).'</a>';
 								if(count($products->posts) ==12) {
+									echo '<a href="' .get_home_url() .'/produkty?cat='. $catActual .'&pa='.($pa) . '" class="actual">'.($pa).'</a>';
 									echo '<a href="' .get_home_url() .'/produkty?cat='. $catActual .'&pa='.($pa+1) .'" class="">'.($pa+1).'</a>' ;
 								}
 

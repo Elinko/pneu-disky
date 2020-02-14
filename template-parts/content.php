@@ -21,7 +21,7 @@
 					<?php the_title( '<h3 class="entry-title">', '</h3>' ); ?>
 					<?php the_excerpt() ?>
 
-					<p><a class="btn btn-primary" href="<?php echo get_post_permalink() ?>">Čti více</a></p>
+					<p><a class="btn btn-primary" href="<?php echo get_post_permalink() ?>">Čítaj ďalej</a></p>
 				</div>
 			</div>
 		<?php else: ?>
@@ -30,7 +30,7 @@
 					<?php the_title( '<h3 class="entry-title">', '</h3>' ); ?>
 					<?php the_excerpt() ?>
 
-					<p><a class="btn btn-primary" href="<?php echo get_post_permalink() ?>">Čti více</a></p>
+					<p><a class="btn btn-primary" href="<?php echo get_post_permalink() ?>">Čítaj ďalej</a></p>
 				</div>
 			</div>
 			<div class="col-md-6  text-center">
